@@ -1,0 +1,13 @@
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+img {
+  @include circle(36px);
+  line-height: 36px;
+  vertical-align: middle;
+  margin-right: 50%;
+}
+

@@ -1,0 +1,18 @@
+<button md-raised-button (click)="loadMessages()">
+  Load Messages
+</button>
+
+<div #messagePanel class="messages-panel"
+     [scrollTop]="messagePanel.scrollHeight">
+
+  <app-message [message]="message"
+               *ngFor="let message of messages"></app-message>
+
+</div>
+
+<md-input-container>
+  <input #inputElement
+         md-input
+         (keydown.enter)="insertMessage(inputElement)"
+         placeholder="Your Message">
+</md-input-container>
